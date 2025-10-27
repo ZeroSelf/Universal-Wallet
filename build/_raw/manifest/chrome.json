@@ -1,0 +1,7 @@
+{
+  "externally_connectable": {
+    "matches": ["https://www.blacknode.co/*"],
+    "ids": ["*"]
+  },
+  "minimum_chrome_version": "88"
+}
