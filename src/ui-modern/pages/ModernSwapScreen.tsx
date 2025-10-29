@@ -159,7 +159,7 @@ export const ModernSwapScreen: React.FC = () => {
         symbol: selectedAsset.symbol,
         name: selectedAsset.name,
         balance: selectedAsset.amount,
-        icon: getAssetIcon(selectedAsset.symbol, selectedAsset.name, selectedAsset.type)
+        icon: getAssetIcon(selectedAsset.symbol, selectedAsset.name, selectedAsset.type, 18)
       };
     }
 
@@ -169,7 +169,7 @@ export const ModernSwapScreen: React.FC = () => {
         symbol: 'BTC',
         name: 'Bitcoin',
         balance: btcBalance,
-        icon: getAssetIcon('BTC', 'Bitcoin', 'btc')
+        icon: getAssetIcon('BTC', 'Bitcoin', 'btc', 18)
       };
     }
     // Fallback to first available asset
@@ -177,7 +177,7 @@ export const ModernSwapScreen: React.FC = () => {
       symbol: 'BTC',
       name: 'Bitcoin',
       balance: '0',
-      icon: getAssetIcon('BTC', 'Bitcoin', 'btc')
+      icon: getAssetIcon('BTC', 'Bitcoin', 'btc', 18)
     };
   });
 

@@ -156,7 +156,8 @@ export const ModernCurrencySelector: React.FC<ModernCurrencySelectorProps> = ({
           onClick={() => !disabled && !loading && toggleDropdown(!isOpen)}
           disabled={disabled || loading}
           style={{
-            width: 'auto',
+            width: '120px',
+            minWidth: '120px',
             background: buttonBg,
             border: isOpen ? '1px solid var(--modern-accent-primary)' : '1px solid rgba(255, 255, 255, 0.14)',
             borderRadius: '9999px',
@@ -166,7 +167,9 @@ export const ModernCurrencySelector: React.FC<ModernCurrencySelectorProps> = ({
             gap: '8px',
             cursor: disabled || loading ? 'not-allowed' : 'pointer',
             opacity: disabled ? 0.5 : 1,
-            transition: 'all 0.2s ease'
+            transition: 'all 0.2s ease',
+            justifyContent: 'space-between',
+            boxSizing: 'border-box'
           }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             {loading && !selectedCurrency ? (
