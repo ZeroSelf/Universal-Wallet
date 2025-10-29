@@ -9,6 +9,8 @@ import { useCurrentKeyring } from '@/ui/state/keyrings/hooks';
 import { fontSizes } from '@/ui/theme/font';
 import { shortAddress, useApproval, useWallet } from '@/ui/utils';
 import { CheckCircleFilled, LoadingOutlined } from '@ant-design/icons';
+import ModernConnectScreen from '../../../../ui-modern/pages/ModernConnectScreen';
+import { getUiType } from '@/ui/utils';
 
 interface MyItemProps {
   account?: Account;
@@ -57,6 +59,13 @@ interface Props {
 }
 
 export default function Connect({ params: { session } }: Props) {
+  const UIType = getUiType();
+  
+  // Use modern UI if available, otherwise fallback to classic UI
+  if (UIType.isModern || true) { // Set to true to always use modern, or add detection logic
+    return <ModernConnectScreen params={{ session }} />;
+  }
+  
   const [getApproval, resolveApproval, rejectApproval] = useApproval();
   const { t } = useI18n();
 
