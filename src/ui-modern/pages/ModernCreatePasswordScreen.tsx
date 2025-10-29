@@ -21,7 +21,7 @@ const CustomLogo: React.FC<{ size?: string; color?: string }> = ({ size = '32px'
       />
       <path
         fill={color}
-        d="M15.5,3.1c-.3,4.2-.5,4.5-4.7,4.7,4.2.3,4.5.5,4.7,4.7.3-4.2.5-4.5,4.7-4.7-4.2-.3-4.5-.5-4.7-4.7Z"
+        d="M15.5,3.1c-.3,4.2-.5,4.5-4.7,4.7,4.2.3,4.5.5,4.7,4.7.3-4.2.5-4.5,4.7-4.7Z"
       />
     </g>
   </svg>
@@ -185,7 +185,7 @@ export const ModernCreatePasswordScreen: React.FC = () => {
             label="Wallet Name"
             placeholder="Enter wallet name"
             value={walletName}
-            onChange={setWalletName}
+            onChange={(e) => setWalletName(e.target.value)}
             autoFocus
           />
 
