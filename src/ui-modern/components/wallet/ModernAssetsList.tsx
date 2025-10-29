@@ -322,7 +322,7 @@ export const ModernAssetsList: React.FC<ModernAssetsListProps> = ({ assets, load
                 <div
                   style={{
                     fontSize: '12px',
-                    color: asset.change.startsWith('+') ? '#34c759' : '#ff3b30'
+                    color: asset.change.startsWith('+') ? 'var(--modern-accent-primary)' : '#ff3b30'
                   }}>
                   {asset.change}
                 </div>

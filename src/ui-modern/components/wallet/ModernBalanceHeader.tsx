@@ -433,7 +433,7 @@ export const ModernBalanceHeader: React.FC<ModernBalanceHeaderProps> = ({
           style={{
             fontSize: '16px',
             fontWeight: '600',
-            color: priceChangeDisplay.isPositive ? '#34c759' : '#ff3b30'
+            color: priceChangeDisplay.isPositive ? 'var(--modern-accent-primary)' : '#ff3b30'
           }}>
           {priceChangeDisplay.changeText}
         </span>
@@ -441,8 +441,8 @@ export const ModernBalanceHeader: React.FC<ModernBalanceHeaderProps> = ({
           style={{
             fontSize: '14px',
             fontWeight: '500',
-            color: priceChangeDisplay.isPositive ? '#34c759' : '#ff3b30',
-            backgroundColor: priceChangeDisplay.isPositive ? 'rgba(52, 199, 89, 0.15)' : 'rgba(255, 59, 48, 0.15)',
+            color: priceChangeDisplay.isPositive ? 'var(--modern-accent-primary)' : '#ff3b30',
+            backgroundColor: priceChangeDisplay.isPositive ? 'rgba(114, 228, 173, 0.15)' : 'rgba(255, 59, 48, 0.15)',
             padding: '2px 8px',
             borderRadius: '6px'
           }}>
