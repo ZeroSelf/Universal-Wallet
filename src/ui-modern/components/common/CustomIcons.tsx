@@ -73,7 +73,7 @@ export const SwapIcon: React.FC<IconProps> = ({ size = 24, color = '#000000', st
   <svg
     width={size}
     height={size}
-    viewBox="0 0 100 100"
+    viewBox="0 0 110 100"
     fill="none"
     style={style}
   >
