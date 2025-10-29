@@ -34,7 +34,7 @@ export const ModernQuickActions: React.FC<ModernQuickActionsProps> = ({ onSend, 
     {
       id: 'send',
       label: t('send'),
-      icon: <PaperPlaneIcon size={24} color="#ffffff" />,
+      icon: <PaperPlaneIcon size={24} color="#ffffff" style={{ transform: 'translateY(-3px)' }} />,
       onClick: onSend
     },
     {
