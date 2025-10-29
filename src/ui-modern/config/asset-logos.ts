@@ -1,6 +1,7 @@
 // Imports des logos d'assets
 import logo2009Jan03 from '../simplicity-assets-logo/2009-jan-03_logo.png';
 import logoBtcLife from '../simplicity-assets-logo/btc人生_logo.png';
+import logoBitcoin from '../simplicity-assets-logo/btc-logo.jpg';
 import logoGamestop from '../simplicity-assets-logo/gamestop_logo.png';
 import logoKek from '../simplicity-assets-logo/kek_logo.png';
 import logoLol from '../simplicity-assets-logo/lol_logo.png';
@@ -19,6 +20,18 @@ export interface AssetLogoConfig {
 
 // Liste des logos disponibles dans simplicity-assets-logo/
 export const availableLogos: AssetLogoConfig[] = [
+  {
+    symbol: 'BTC',
+    name: 'Bitcoin',
+    logoPath: logoBitcoin,
+    type: 'btc'
+  },
+  {
+    symbol: 'btc',
+    name: 'Bitcoin',
+    logoPath: logoBitcoin,
+    type: 'btc'
+  },
   {
     symbol: '2009-jan-03',
     name: '2009-jan-03',

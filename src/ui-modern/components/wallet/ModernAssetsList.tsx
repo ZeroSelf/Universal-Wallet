@@ -70,8 +70,28 @@ export const ModernAssetsList: React.FC<ModernAssetsListProps> = ({ assets, load
   const getAssetIcon = (asset: Asset) => {
     console.log(`Getting icon for asset: ${asset.name} (${asset.type})`);
 
+    // Chercher d'abord le logo dans la liste (y compris pour BTC)
+    const assetLogoPath = getAssetLogo(asset.symbol, asset.name, asset.type);
+
+    if (assetLogoPath) {
+      console.log('Using available logo:', assetLogoPath);
+      return (
+        <img
+          src={assetLogoPath}
+          alt={asset.name}
+          style={{
+            width: '32px',
+            height: '32px',
+            borderRadius: '50%',
+            objectFit: 'cover'
+          }}
+        />
+      );
+    }
+
+    // Fallback : icône générée pour BTC si pas de logo trouvé
     if (asset.type === 'btc') {
-      console.log('Using BTC icon');
+      console.log('Using BTC icon (fallback)');
       return (
         <div
           style={{
@@ -88,25 +108,6 @@ export const ModernAssetsList: React.FC<ModernAssetsListProps> = ({ assets, load
           }}>
           ₿
         </div>
-      );
-    }
-
-    // Chercher le logo dans la liste des logos disponibles
-    const assetLogoPath = getAssetLogo(asset.symbol, asset.name, asset.type);
-
-    if (assetLogoPath) {
-      console.log('Using available logo:', assetLogoPath);
-      return (
-        <img
-          src={assetLogoPath}
-          alt={asset.name}
-          style={{
-            width: '32px',
-            height: '32px',
-            borderRadius: '50%',
-            objectFit: 'cover'
-          }}
-        />
       );
     }
 

@@ -52,7 +52,24 @@ export const ModernSwapScreen: React.FC = () => {
 
   // Helper function to get asset icon
   const getAssetIcon = (symbol: string, name: string, type: string, size = 22) => {
-    // BTC gets a special gradient icon
+    // Chercher d'abord le logo dans la config (y compris pour BTC)
+    const logoPath = getAssetLogo(symbol, name, type);
+    if (logoPath) {
+      return (
+        <img
+          src={logoPath}
+          alt={name}
+          style={{
+            width: `${size}px`,
+            height: `${size}px`,
+            borderRadius: '50%',
+            objectFit: 'cover'
+          }}
+        />
+      );
+    }
+
+    // Fallback : BTC gets a special gradient icon si pas de logo trouvé
     if (type === 'btc' || symbol === 'BTC') {
       return (
         <div
@@ -76,23 +93,6 @@ export const ModernSwapScreen: React.FC = () => {
           }}>
           ₿
         </div>
-      );
-    }
-
-    // Try to get asset logo from config
-    const logoPath = getAssetLogo(symbol, name, type);
-    if (logoPath) {
-      return (
-        <img
-          src={logoPath}
-          alt={name}
-          style={{
-            width: `${size}px`,
-            height: `${size}px`,
-            borderRadius: '50%',
-            objectFit: 'cover'
-          }}
-        />
       );
     }
 
