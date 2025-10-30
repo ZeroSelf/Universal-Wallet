@@ -78,6 +78,10 @@ function task_clean_tmps() {
   return gulp.src(`dist/${options.browser}/manifest`, { read: false }).pipe(clean());
 }
 
+function task_copy_locales() {
+  return gulp.src('src/_locales/**/*').pipe(gulp.dest(`dist/${options.browser}/_locales`));
+}
+
 function task_webpack(cb) {
   webpack(
     webpackConfigFunc({
@@ -124,6 +128,7 @@ exports.build = gulp.series(
   task_merge_manifest,
   task_clean_tmps,
   task_webpack,
+  task_copy_locales,
   task_uglify,
   task_package
 );

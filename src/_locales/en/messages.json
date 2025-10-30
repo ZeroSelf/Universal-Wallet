@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Universal Wallet" },
   "appDescription": {
-    "message": "Secure Bitcoin wallet with OPI Universal Protocol support. Apple/Revolut-inspired minimalist design."
+    "message": "A wallet built for the future of Bitcoin. Manage all your Universal Tokens with no limits on assets, balances, or usage."
   },
   "receive": {
     "message": "Receive"

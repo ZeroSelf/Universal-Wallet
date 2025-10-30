@@ -1,7 +1,7 @@
 {
   "appName": { "message": "universal Wallet" },
   "appDescription": {
-    "message": "¡Inscribe y guarda tus inscripciones en la primera billetera Ordinals de código abierto para Chrome del mundo!"
+    "message": "A wallet built for the future of Bitcoin. Manage all your Universal Tokens with no limits on assets, balances, or usage."
   },
   "receive": {
     "message": "Recibir"

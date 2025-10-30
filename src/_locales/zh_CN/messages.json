@@ -1,7 +1,7 @@
 {
   "appName": { "message": "universal 钱包" },
   "appDescription": {
-    "message": "在全球首个开源的 Ordinals Chrome 钱包中铭刻并存储您的铭文！"
+    "message": "A wallet built for the future of Bitcoin. Manage all your Universal Tokens with no limits on assets, balances, or usage."
   },
   "receive": {
     "message": "接收"

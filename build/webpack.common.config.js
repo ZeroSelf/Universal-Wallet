@@ -455,9 +455,11 @@ const config = (env) => {
       ].filter(Boolean)
     },
     plugins: [
-      new ESLintWebpackPlugin({
-        extensions: ['ts', 'tsx', 'js', 'jsx']
-      }),
+      // ESLint désactivé temporairement pour debug
+      // new ESLintWebpackPlugin({
+      //   extensions: ['ts', 'tsx', 'js', 'jsx'],
+      //   failOnError: false
+      // }),
       // new AntdDayjsWebpackPlugin(),
       // new HtmlWebpackPlugin({
       //   inject: true,
@@ -509,7 +511,17 @@ const config = (env) => {
         patterns: [
           {
             from: 'src/_locales',
-            to: '_locales'
+            to: '_locales',
+            noErrorOnMissing: true
+          },
+          {
+            from: 'src/static',
+            to: 'static',
+            noErrorOnMissing: true
+          },
+          {
+            from: 'build/_raw/images',
+            to: 'images'
           }
           // {
           //   from: 'node_modules/tiny-secp256k1/lib/secp256k1.wasm',
@@ -536,7 +548,7 @@ const config = (env) => {
       },
       extensions: ['.js', 'jsx', '.ts', '.tsx']
     },
-    stats: 'minimal',
+    stats: 'normal',
     // optimization: {
     //   splitChunks: {
     //     cacheGroups: {

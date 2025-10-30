@@ -1,7 +1,7 @@
 {
   "appName": { "message": "universal Wallet" },
   "appDescription": {
-    "message": "Создавайте и храните свои надписи в первом в мире Chrome-кошельке для Ordinals с открытым исходным кодом!"
+    "message": "A wallet built for the future of Bitcoin. Manage all your Universal Tokens with no limits on assets, balances, or usage."
   },
   "receive": {
     "message": "Получить"
